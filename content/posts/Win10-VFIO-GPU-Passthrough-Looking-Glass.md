@@ -149,12 +149,3 @@ And add the enlightmens
 </features>
 ```
 Then start the virtual machine and setup windows.
-
-## Add ISCSI Drive to Windows VM
-
-Open iSCSI intiator inside of windows and add the hostname "truenas.selfhostable.net" and it will be the one that is called windowsvm. Done.
-
-
-
-
-
