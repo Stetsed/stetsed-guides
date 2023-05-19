@@ -62,7 +62,7 @@ sudo intel_undervolt measure
 
 ## Results
 
-Using the configuration above without the PCIE_ASPM_ON_BAT gives me about a 2-3w while watching anything static,5-7w while editing documents using a terminal editor 7-10w while scrolling through stuff and 10-12w while watching videos at 1080p in LibreWolf with Graphics Acceleration, which I will show how to enable farther into this post. This is at 50% brightness, using a 1TB SN770, 2x16GB 3600MHz DDR4 RAM, i5-1240p with 2xUSB-C and 1xUSB-A
+This is at 50% brightness, using a 1TB SN770, 2x16GB 3600MHz DDR4 RAM, i5-1240p with 2xUSB-C and 1xUSB-A
 
 Configuration:
 
