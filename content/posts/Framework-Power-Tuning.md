@@ -71,7 +71,7 @@ Configuration:
 - Librewolf With Graphics Acceleration
 - Neovim
 
-My [Dotfiles](https://github.com/Stetsed/.dotfiles)
+[Dotfiles](https://github.com/Stetsed/.dotfiles)
 
 |  Info   | Idle    | Editing Text Documents    | Scrolling Through Documents    | Watching 1080p Videos    |
 |---------------- | --------------- | --------------- | --------------- | --------------- |
