@@ -2,6 +2,7 @@
 title: "Fingerprint ArchLinux Framework"
 date: 2023-05-18T13:46:45+02:00
 draft: false
+tags: ["Framework Laptop 13", "Linux", "Security"]
 ---
 
 This guide will show you how to enable fingerprint scanning on Archlinux using fprintd. Firstly run [Appimage](https://drive.google.com/file/d/1CJqHfYatO80xI-DoOgs357ubin0UH2dR/view?usp=sharing) to clear the current fingerprint device and make sure we don't get errors later.

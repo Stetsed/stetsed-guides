@@ -2,13 +2,15 @@
 title: "Framework Power Tuning"
 date: 2023-05-19T12:08:19+02:00
 draft: false
+tags: ["Framework Laptop 13", "Linux", "Improvement"]
+summary: "Learn how to tune Linux on the Framework 13 Laptop to achieve better battery life!"
 ---
 
-This guide will show you how to tune your framework laptop on linux to achieve better performance life using TLP 
+In this post we will go through the steps to achieve better battery life starting with using [TLP](https://github.com/linrunner/TLP), and then later in the post on how to make sure you have graphics acceleration for video playback so your battery usage while watching videos can be massivley decreased.
 
-Firstly go ahead and install tlp on your platform, below are some examples for common platforms.
+## TLP
 
-# TLP
+To start with we are going to want to install TLP, this will vary from distro to distro but I have listed a few common ones here below.
 
 ```bash
 # Fedora
@@ -43,7 +45,7 @@ CPU_HWP_DYN_BOOST_ON_BAT=1
 
 Now the above is what gives us most of a boost, but the below you can also add. Please read the notes as some of it might not be wanted.
 
-```conf
+```
 # Tells the PCIE Active State Power Managment to basically try to preserve as much power as possible, mixed results with this as sometimes it works other times it doesn't. Make sure to test this one as sometimes it leads to a watt or 2 HIGHER usage.
 PCIE_ASPM_ON_BAT=powersupersave
 
@@ -59,24 +61,6 @@ Now go ahead and enable the service with "systemctl enable --now tlp" and you sh
 ```bash
 sudo intel_undervolt measure
 ```
-
-## Results
-
-This is at 50% brightness, using a 1TB SN770, 2x16GB 3600MHz DDR4 RAM, i5-1240p with 2xUSB-C and 1xUSB-A
-
-Configuration:
-
-- Hyprland
-- Waybar
-- Librewolf With Graphics Acceleration
-- Neovim
-
-[Dotfiles](https://github.com/Stetsed/.dotfiles)
-
-|  Info   | Idle    | Editing Text Documents    | Scrolling Through Documents    | Watching 1080p Videos    |
-|---------------- | --------------- | --------------- | --------------- | --------------- |
-| Before TLP   | 7-8w    | 8-10w    | 10-14w    | 10-13w   |
-| After TLP | 2-3w | 4-6w  |  7-9w | 10w   |
 
 ## Enable GPU Acceleration
 
@@ -98,13 +82,32 @@ apt install intel-media-va-driver
 4. Set "media.ffmpeg.vaapi.enabled" to true
 5. If you are running wayland start firefox with the enviroment variable set "MOZ_ENABLE_WAYLAND" to 1.
 
-Using GPU Acceleration before adding TLP dropped usage from about 20w to 10-13w.
+Using GPU Acceleration before adding TLP dropped usage from about 15-20w to 10-13w.
 
-# Other Optimizations
+## Other Optimizations
 
 Press FN + Space to disable Keyboard backlight which usually saves around 0.5w.
 
-# Other Guides
+## Results
+
+This is at 50% brightness, using a 1TB SN770, 2x16GB 3600MHz DDR4 RAM, i5-1240p with 2xUSB-C and 1xUSB-A. For watching videos it is while watching a 1080p video on youtube.
+
+Configuration:
+
+- Hyprland
+- Waybar
+- Librewolf 
+- Neovim
+
+[Dotfiles](https://github.com/Stetsed/.dotfiles)
+
+|  Info   | Idle    | Editing Text Documents    | Scrolling Through Documents    | Watching 1080p Videos    |
+|---------------- | --------------- | --------------- | --------------- | --------------- |
+| Before Graphics Acceleration | 7-8w | 8-10w | 10-14w | 15-20w
+| Before TLP   | 7-8w    | 8-10w    | 10-14w    | 10-13w   |
+| After TLP | 2-3w | 4-6w  |  7-9w | 10w   |
+
+## Other Guides
 
 - Framework Official Guides: [Ubuntu](https://knowledgebase.frame.work/en_us/optimizing-ubuntu-battery-life-Sye_48Lg3) & [Fedora](https://knowledgebase.frame.work/en_us/optimizing-fedora-battery-life-r1baXZh)
 - [Framework Forum Battery Life Thread](https://community.frame.work/c/framework-laptop/linux/)
