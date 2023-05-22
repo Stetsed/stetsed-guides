@@ -21,7 +21,7 @@ Due to my program reading files and writing files it does add some level of over
 
 ## Hardware
 - Intel i5-1240p
-- 32GB 3600Mhz DDR4 RAM
+- 32GB 3200Mhz DDR4 RAM
 - SN770 1TB NVME SSD
 - 2x USB-C, 1x USB-A, 1x Displayport Card
 
