@@ -1,7 +1,9 @@
 ---
 title: "Framework Power Experiment"
 date: 2023-05-22T09:27:16+02:00
-draft: true
+draft: false
+tags: ["Framework Laptop 13", "Linux", "Improvement"]
+summary: "Testing the diffrent frameworks battery life with diffrent settings and tasks"
 ---
 
 Today in this post I will be going through my experiments into the framework laptops power draw. 
