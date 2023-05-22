@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = "Stetsed's Bullshit Guides"
 theme = 'PaperMod'
 
-enableRobotsTXT =true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
