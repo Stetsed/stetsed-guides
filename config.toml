@@ -1,6 +1,6 @@
 baseURL = 'https://stetsed.github.io/stetsed-guides/'
 languageCode = 'en-us'
-title = "Stetsed's Bullshit Guides"
+title = "Stetsed's Guides"
 theme = 'PaperMod'
 
 buildDrafts = false
@@ -9,18 +9,18 @@ buildExpired = false
 
 [params]
 env = "production"
-title = "Stetsed's Bullshit Guides"
-description = "Welcome to my blog, with my guides for bullshit I need to remember!"
+title = "Stetsed's Guides"
+description = "Welcome to my blog, with my guides for stuff I need to remember!"
 keywords = [ "Blog", "Hugo", "PaperMod", "Stetsed", "VFIO", "Framework", "Framework13", "Framework Laptop", "Arch Linux", "Linux"]
 author = "Stetsed"
 DateFormat = "January 2, 2006"
 defaultTheme = "dark"
 disableThemeToggle = false
 ShowReadingTime = true
-ShowShareButtons = true
+ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
-ShowCodeCopyButtons = false
+ShowCodeCopyButtons = true
 ShowWordCount = true
 ShowRssButtonInSectionTermList = true
 UseHugoToc = false
@@ -40,8 +40,8 @@ mainSections = ["posts"]
 
   [params.profileMode]
   enabled = false
-  title = "Stetsed's Bullshit Guides"
-  subtitle = "Welcome to my blog, with my guides for bullshit I need to remember!"
+  title = "Stetsed's Guides"
+  subtitle = "Welcome to my blog, with my guides for stuff I need to remember!"
 
     [[params.profileMode.buttons]]
     name = "Posts"
@@ -53,7 +53,7 @@ mainSections = ["posts"]
 
   [params.homeInfoParams]
   Title = "Hi there, Welcome to Stetsed's Guides 👋"
-  Content = "Welcome to my blog, with my guides for bullshit I need to remember!"
+  Content = "Welcome to my blog, with my guides for stuff I need to remember!"
 
   [[params.socialIcons]]
   name = "github"
