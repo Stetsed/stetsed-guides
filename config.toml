@@ -83,12 +83,6 @@ mainSections = ["posts"]
   keys = [ "title", "permalink", "summary", "content" ]
 
 [[menu.main]]
-identifier = "Categories"
-name = "Categories"
-url = "/categories/"
-weight = 10
-
-[[menu.main]]
 identifier = "Tags"
 name = "Tags"
 url = "/tags/"
