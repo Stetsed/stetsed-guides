@@ -127,12 +127,18 @@ pacman -Syu
 pacman -Syu zfs-dkms(-git)
 ```
 
-#### Add ZFS module to mkinitcpio.conf
+#### Add ZFS module to mkinitcpio.conf and kernel cmdline
 
 Open /etc/mkinitcpio.conf in your preffered text editor that's installed. Then in the "Hooks" line between keyboard and keymap add a "zfs" hook which will do what we want. Then go ahead and regenerate mkinitcpio files and then you can continue your install as normal as you usually would.
 
 ```bash
 mkinitcpio -P
+```
+
+You also need to add the below options to your kernel cmdline, this can either be in /etc/kernel/cmdline if your generating UKI's using Mkinitcpio, or in your dracut settings or in your bootloader settings.
+
+```
+zfs=zroot/ROOT/arch rw
 ```
 
 ## After Setup
