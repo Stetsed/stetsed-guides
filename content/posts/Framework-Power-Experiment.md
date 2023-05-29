@@ -1,10 +1,14 @@
 ---
 title: "Framework Power Experiment"
 date: 2023-05-22T09:27:16+02:00
-draft: false
+draft: true
 tags: ["Framework Laptop 13", "Linux", "Improvement"]
 summary: "Testing the diffrent frameworks battery life with diffrent settings and tasks"
 ---
+
+# Note this is a draft due to for whatever reason the results are way to varied to draw any conclusion.
+
+Such as sometimes the display port card has identical power usage to without it but sometimes it draws 1-3w more. As such I will be leaving this for now and waiting to find out a few more things before I start testing again with a more scientific method.
 
 Today in this post I will be going through my experiments into the framework laptops power draw. 
 
