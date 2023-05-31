@@ -22,7 +22,7 @@ This guide was made for 1 drive, if you are using multiple drives you probally w
 
 This guide is assuming your using a Modern NVME SSD. Through parts of this guide I will add notes where you might want to change the settings for certain diffrent scenarios. So please read the comments before just copy and pasting.
 
-Alot of this info I have integrated into my Installer which you can find [Here](https://github.com/Stetsed/.dotfiles/blob/main/.bin/fullinstall.sh), while I wouldn't recommend blindly using it you might be able to use it as a starting point for your installer to make setting up ZFS easier.
+Alot of this info I have integrated into my Installer which you can find [Here](https://github.com/Stetsed/.dotfiles/blob/main/.bin/install/zfs_install.sh), while I wouldn't recommend blindly using it you might be able to use it as a starting point for your installer to make setting up ZFS easier.
 
 ## Setup
 
@@ -169,6 +169,8 @@ zfs send -vw (path) @ (snapshot-name) | ssh kaboommachine "zfs recieve pool/back
 ### What can you do after this?
 
 You can setup something like [ZFSBootMenu](https://docs.zfsbootmenu.org/en/v2.2.x/) which allows you to easily switch between Distro's that are hosted on your ZFS pool, or go back to previous snapshots, or hell even bootstrap your entire system from a NAS via ZFS recv. Do note that for this to work you need to have your boot items be on the ZFS pool, so you would want to move your EFI mount to something like /EFI or /boot/EFI.
+
+If you setup encryption but want to be able to unlock the PC remotely have a look at [My Script](https://github.com/Stetsed/.dotfiles/blob/main/.bin/install/extra.sh) specifically at the ZFS_Remote_Unlock_Setup part of the script which utilizes dropbear to allow you to remotely unlock the PC via SSH.
 
 ## Credits
 

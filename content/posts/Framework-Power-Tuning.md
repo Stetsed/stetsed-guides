@@ -101,11 +101,11 @@ Configuration:
 
 [Dotfiles](https://github.com/Stetsed/.dotfiles)
 
-|  Info   | Idle    | Editing Text Documents    | Scrolling Through Documents    | Watching 1080p Videos    |
+|  Info   | Idle    | Editing Text Documents    | Scrolling Through Content    | Watching 1080p Videos    |
 |---------------- | --------------- | --------------- | --------------- | --------------- |
 | Before Graphics Acceleration | 7-8w | 8-10w | 10-14w | 15-20w
 | Before TLP   | 7-8w    | 8-10w    | 10-14w    | 10-13w   |
-| After TLP | 2-3w | 4-6w  |  7-9w | 10w   |
+| After TLP | 2-5w | 5-7w  |  7-9w | 10w   |
 
 ## Other Guides
 
