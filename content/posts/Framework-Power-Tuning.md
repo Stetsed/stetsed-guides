@@ -56,10 +56,10 @@ CPU_SCALING_MAX_FREQ_ON_AC=4200000
 WIFI_PWR_ON_BAT=off
 ```
 
-Now go ahead and enable the service with "systemctl enable --now tlp" and you should be saving alot of power!. I hope this guide helped and if it did you can leave a star on the [Repository](https://github.com/Stetsed/stetsed-guides). You can test how much power your device uses with the below command.
+Now go ahead and enable the service with "systemctl enable --now tlp" and you should be saving alot of power!. I hope this guide helped and if it did you can leave a star on the [Repository](https://github.com/Stetsed/stetsed-guides). You can test how much power your device uses with my script [Here](https://github.com/Stetsed/framework-power-measurment)
 
 ```bash
-sudo intel_undervolt measure
+
 ```
 
 ## Enable GPU Acceleration
