@@ -1,4 +1,4 @@
-baseURL = 'https://stetsed.github.io/stetsed-guides/'
+baseURL = 'https://stetsed.xyz'
 languageCode = 'en-us'
 title = "Stetsed's Guides"
 theme = 'PaperMod'
@@ -6,6 +6,10 @@ theme = 'PaperMod'
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
 
 [params]
 env = "production"
@@ -92,3 +96,9 @@ noClasses = false
 guessSyntax = true
 codefences = true
 lineNos = true
+
+[Params.umami]
+  enabled = true
+  websiteId = "93131be9-87e5-4164-9cf0-1394c09ab0d6"
+  jsLocation = "https://analytics.stetsed.xyz/script.js"
+
