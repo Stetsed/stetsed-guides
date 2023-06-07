@@ -90,6 +90,13 @@ mainSections = ["posts"]
 identifier = "Tags"
 name = "Tags"
 url = "/tags/"
+weight = 30
+
+[[menu.main]]
+identifier = "Info"
+name = "Info"
+url = "/info/"
+weight = 20
 
 [markup.highlight]
 noClasses = false
