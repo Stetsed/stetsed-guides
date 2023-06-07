@@ -11,6 +11,8 @@ Today I will be showing how to use Mullvad VPN on the UDM Pro. This is a great w
 - Have a paid for mullvad account
 - Have a UDM Pro or UDM Pro SE (I have not tested this on the UDM)
 
+* UDM Stands for Unifi Dream Machine
+
 ## Getting the OVPN file
 
 Firstly we will need to get the OVPN file, we will get this from mullvad. So firstly you will want to navigate to [Mullvad.net](https://mullvad.net/en/account/#/openvpn-config) and if not yet logged in log into your account. Then when your in the OVPN generator go ahead and select the Android/Chrome OS option as this will let us use it with our UDM Pro.
@@ -21,9 +23,17 @@ Now go ahead and select the settings you want, I personally went for a server in
 
 Now assuming your on the latest UDM Network Version(At time or writing 7.4.156) we can now upload the OVPN file to the UDM Pro. To do this we will need to navigate to the UDM Pro web interface. Once there go ahead and click on the networks section and then go into settings. Next go into 'Teleport & VPN' and look for "VPN Client" and click on "Create New VPN Client". Now go ahead and give your VPN tunnel a name and upload the OVPN file in the slot where it says to do as such. Next your username will be your account number with no spaces and your password with be "m". Now go ahead and save this and it will test if it's valid and it should work. Next we want to create a rule to direct all traffic through the VPN.
 
+![UDM Pro Settings](/images/udm-settings.png)
+![UDM Pro VPN Menu](/images/udm-vpn-menu.png)
+![UDM Pro VPN Client](/images/udm-vpn-client.png)
+
 ## Making traffic use VPN tunnel
 
 You will want to go ahead and create a Route to route all our traffic through the VPN. Go ahead and click "Create new Route" on the bottom left and then you will want to set what to route to all traffic(or Specific traffic if you only want to use the VPN for certain cases) the target can be whatever you want but I personally split my network and my personal network I have set to use the VPN and the network which is used my family I have set not to route to prevent it breaking for example Netflix for them as Netflix can detect it.
+
+![Traffic Managment](/images/udm-traffic-managment.png)
+![Create Route](/images/udm-create-route.png)
+
 
 ## Done
 
