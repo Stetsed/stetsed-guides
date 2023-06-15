@@ -66,6 +66,7 @@ Now go ahead and enable the service with "systemctl enable --now tlp" and you sh
 
 To enable GPU acceleration for any firefox based browser following the below steps
 
+
 1. Install intel-media-driver 
 ```bash
 # Fedora
@@ -83,6 +84,8 @@ apt install intel-media-va-driver
 5. If you are running wayland start firefox with the enviroment variable set "MOZ_ENABLE_WAYLAND" to 1.
 
 Using GPU Acceleration before adding TLP dropped usage from about 15-20w to 10-13w.
+
+* Note: For Fedora you will need to do some extra steps to get it working look at the [Wiki](https://fedoraproject.org/wiki/Firefox_Hardware_acceleration).
 
 ## Other Optimizations
 
