@@ -60,7 +60,7 @@ echo 'theme = "PaperMod"' >> config.toml
 
 ### Step 4 - Configure pushing to the git repository
 
-Firstly go ahead and create a README.md and a LICENSE file, what LICENSE you pick will be up to you but if you don't care then I would recommend [UnLicense]() which basically says "Do whatever the hell you want". Now we will first want to create a .gitignore file and add the following to it.
+Firstly go ahead and create a README.md and a LICENSE file, what LICENSE you pick will be up to you but if you don't care then I would recommend [UnLicense](https://unlicense.org/) which basically says "Do whatever the hell you want". Now we will first want to create a .gitignore file and add the following to it.
 
 ```gitignore
 # Generated files by hugo
