@@ -2,6 +2,7 @@
 title: "Mullvad UDM Pro Network Wide VPN"
 date: 2023-06-07T13:56:48+02:00
 draft: false
+tags: ["VPN", "Mullvad", "Unifi", "UDM Pro"]
 ---
 
 Today I will be showing how to use Mullvad VPN on the UDM Pro. This is a great way to secure your entire network and keep your ISP from spying on you. This is also a great way to get around geo blocking. This is a very simple setup and should only take a few minutes to complete.
