@@ -42,11 +42,14 @@ Next we will want to go ahead and intialize the hugo project. So go to a folder 
 
 
 ```bash
-# Intialize the git repository
-git init
-
 # Initialize the hugo project
 hugo new site (repo-name)
+
+# Enter the directory
+cd (repo-name)
+
+# Intialize Git Repository
+git init
 
 # Clone the theme
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
