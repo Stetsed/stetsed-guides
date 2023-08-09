@@ -1,0 +1,7 @@
+version: '3'
+services:
+  stetsed-guides:
+    image: git.selfhostable.net/stetsed/stetsed-guides:latest
+    restart: unless-stopped
+    ports:
+      - "5328:80"
