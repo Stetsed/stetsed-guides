@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.CONTAINER_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@master
+        uses: docker/build-push-action@v4
         with:
           context: "."
           platforms: linux/amd64
