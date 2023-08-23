@@ -64,13 +64,12 @@ The upgrade path for this is more clear as I am currently in pre-order of the Ry
 
 ## Networking
 
-- Unifi Dream Machine Pro
 - Mikrotik CRS317-1G-16S+RM
 - TPLink 24 Port GbE switch
 
-I recently underwent the upgrade from 1GbE for most of my network to 10GbE. The mikrotik switch is where all 10GbE gear plugs in and then for anything GbE it either goes through the UDM Pro or the TPLink switch. 
+I recently underwent the upgrade from 1GbE for most of my network to 10GbE. The mikrotik switch is where all 10GbE gear plugs in and then it has a 1 GbE link over to the TPLink switch which is where all my 1GbE gear plugs in.
 
-As I just made a quiet heavy upgrade to this I don't except to upgrade it soon, however I do plan to upgrade my Desktop to 10GbE as currently only my server has a 10GbE NIC inside of it.
+I just made a quiete major upgrade so currently I do not have many plans to upgrade however I do wanna put in a 5 or so port 1GbE L2 switch between my FTTH termination point and my servers so I can have a Cable running to both servers so I can migrate my Router between servers. Besides this I wanna upgrade my desktop to 10GbE as well.
 
 ## Summary
 
