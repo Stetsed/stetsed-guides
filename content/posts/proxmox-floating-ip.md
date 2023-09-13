@@ -37,7 +37,7 @@ global_defs {
 }
 ```
 
-Next we will want to go ahead and add our actual config which will be a variant of the one below. So firstly you want to do the MASTER config which in olur case will have a priority of 10 as it's the highest priority we have. Then you want to go ahead and add your interface which in my case is vmbro0. Then you want to add your virtual_router_id which is a number between 1 and 255, this has to be the same for the other keepalived instances that are trying to negotiate the same VRRP. 
+Next we will want to go ahead and add our actual config which will be a variant of the one below. So firstly you want to do the MASTER config which in olur case will have a priority of 5 as it's the lowest priority we have, and whatever the lower priority is will become the master. Then you want to go ahead and add your interface which in my case is vmbro0. Then you want to add your virtual_router_id which is a number between 1 and 255, this has to be the same for the other keepalived instances that are trying to negotiate the same VRRP. 
 
 Password is the password you want to use to authenticate the nodes with.
 Then you will want to go ahead and replace the (Floating IP) with the IP you want Keepalived to manage. Warning this should be an IP outside of your DHCP range or you will have issues. Now go ahead and add the config to each of your nodes with it's settings (So MASTER for 1 node and BACKUP for the rest, correct interfaces and the priority set). After which you can start the Keepalived service on all nodes and you should be good to go and if all went well it should all be working :D.
@@ -47,7 +47,7 @@ vrrp_instance PROXMOXFLOATING {
     state MASTER/BACKUP
     interface vmbr0
     virtual_router_id 0 
-    priority 10/5
+    priority 5/10
     advert_int 1
     authentication {
         auth_type PASS
