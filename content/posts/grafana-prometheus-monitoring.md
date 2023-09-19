@@ -40,12 +40,12 @@ services:
     ports:
       - "3000:3000"
     volumes:
-Niet zo weird!      - ./grafana-data:/var/lib/grafana
+      - ./grafana-data:/var/lib/grafana
         ./grafana-etc:/etc/grafana
     restart: unless-stopped
 ```
 
-We basically create 2 applications here, the prometheus and grafana applications. Both of them have 2 bind mounts one for where they store there data and one for where they store there configuration. This allows us to easily transfer the data to another server if we need to. We also expose the ports for both of them so we can access them from the outside world. And then we tell prometheus where it's config file is.
+We basically create 2 applications here, the prometheus and grafana applications. Both of them have 2 bind mounts one for where they store there data and one for where they store there configuration. This allows us to easily transfer the data to another server if we need to. We also expose the ports for both of them so we can access them from the outside world. And then we tell prometheus where it's config file is. And set the Grafana user to root as it just doesn't seem to work even with permissions set up. Go figure.
 
 Next we want to create a few directories and modify some permissions as otherwise both apps will just say "Ehhh.. no" due to permission issues, firstly go ahead and create each of the directories with the below commands, this includes some nested directories for grafana. Then we want to change the owner of the directories to nobody:nogroup so that the applications inside of the docker containers can access them.
 
@@ -55,7 +55,7 @@ cd grafana-etc
 mkdir -p provisioning/datasources provisioning/plugins provisioning/notifiers provisioning/dashboards
 touch grafana.ini
 cd ..
-chown nobody:nogroup -R grafana-etc prometheus-data
+chown nobody:nogroup -R grafana-etc grafana-data prometheus-data
 
 touch prometheus-etc/prometheus.yml
 ```
