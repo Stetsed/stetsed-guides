@@ -29,6 +29,13 @@ net.ipv6.conf.all.forwarding=1
 net.ipv4.ip_forward=1
 ```
 
+And if your using UFW set the below in /etc/ufw/sysctl.conf
+
+```conf
+net/ipv4/ip_forward=1
+net/ipv6/conf/default/forwarding=1
+net/ipv6/conf/all/forwarding=1```
+
 After you have done this you will want to go ahead and replace the Post up and Post down commands that come included with your Wireguard Config with the below set which was the most annoying part to figure out. Replace eth0 with the interface your traffic is gonna go out of.
 
 ```bash
@@ -38,7 +45,7 @@ PreDown = iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 PreDown = ip6tables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 ```
 
-Now to your client configs go ahead and add an IP each generated with https://iplocation.io/ipv6-address-generator which will generate a random local IPv6 adress for you. You will want to add this to the adress section of your client configs adding a comma between the adresses. Also add one to your server in the same way. 
+Now to your client configs go ahead and add an IP each generated with https://iplocation.io/ipv6-address-generator which will generate a random local IPv6 adress for you. You will want to add this to the adress section of your client configs adding a comma between the adresses. Also add one to your server in the same way. Do realise that using ULA address space will make most clients (Linux, iOS, Windows, Android) still prefer to use IPv4. To get around this you would want to use space inside of globally routable space, as your NAT'ing it on the server side anyway you can use anything that isn't in use, if you own it that's even better and otherwise just reserve some of your space of the prefix you got from your ISP. 
 
 Atfer this go ahead and enable the wireguard service and start it. And then assuming you've port forwarded and set the external IP correctly you should now have an IPv6 and IPv4 capable Wireguard Server. 
 
