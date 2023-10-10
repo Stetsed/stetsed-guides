@@ -13,11 +13,11 @@ Currently my primary server is a Dell R530 with the following specs:
 - 2x Intel Xeon E5-2667 v3 @ 3.2GHz
 - 128GB DDR4 ECC RAM
 - 4x 4TB Seagate IronWolf HDDs
-- 1x Dell SAS Drive
+- 2x Random 800GB Enterprise SAS SSDs
 - iDrac 8 Enterprise
 - 1x Intel X520-DA1 10Gb SFP+ NIC
 
-I recently converted this into a Proxmox Server and currently run my main projects on it including my Router, Media VM and a few other bits and bobs. There is also my main function VM which is HA and can go between both Server 1 and Server I recently converted this into a Proxmox Server and currently run my main projects on it including my Router, Media VM and a few other bits and bobs. There is also my main function VM which is HA and can go between both Server 1 and Server 2 as needed if I need to for example restart Server 1 for maintenance.
+I recently converted this into a Proxmox Server and currently run my main projects on it including my Router, Media VM and a few other bits and bobs. There is also my main function VM which is HA and can go between both Server 1 and Server I recently converted this into a Proxmox Server and currently run my main projects on it including my Router, Media VM and a few other bits and bobs. 
 
 It also holds my Linux ISO collection which is currently not replicated over to Server 2 due to it just not being required however in the future I might move this collection to Server 2 due to it having a higher amount of drive slots.(16 v. 8)
 
@@ -36,7 +36,23 @@ I recently acquired a R730XD with the following specs:
 
 This server was a recent addition to my Homelab and is currently not in use much. It does store backups of my main server's VM's(Router, Hub VM) and the Hub VM can migrate between Server 1 and Server 2.
 
-It came with 16x 1TB SAS 12Gbps Drives which I am getting rid off due to them adding over 35 euros a month to the power bill on there own and as such replaced them with the 3x8TB Seagate Enterprise Drives. The upgrade path for this server isn't really clear as it's also very overkill and it's mostly a backup target, but I am currently in the process of setting up an external Proxmox Vote as this will mean that I can setup HA as there will be 3 votes (the 2 Servers and the External Vote). However if I where to upgrade it it would probally be more storage(Can never have enough) and upgrading the CPU's to something a little more single thread powerful.
+It came with 16x 1TB SAS 12Gbps Drives which I am getting rid off due to them adding over 35 euros a month to the power bill on there own and as such replaced them with the 3x8TB Seagate Enterprise Drives. This runs my main function VM however it is HA and can go between both Server 1 and Server 2 as needed if I need to for example restart Server 1 for maintenance. The upgrade path for this server isn't super clear however if I where to upgrade it it would probally be more storage(Can never have enough) and upgrading the CPU's to something a little more single thread powerful.
+
+## Server 3
+
+Another recently acquired server is my Dell R420: 
+
+- 1x Intel Xeon E5-2430 @ 1.1GHz
+- 48GB DDR3 ECC RAM
+- 2x Random 512GB SATA SSDs
+- 1x Random 1TB SATA HDD
+- iDrac 8 Enterprise
+- 1x Intel X520-DA1 10Gb SFP+ NIC
+
+So this server I recently acquired as I wanted to split the routing function to another server which would basically be my "Don't you dare every touch this", server. It's currently running Proxmox on the host to give me another vote inside of the proxmox cluster and then runs VyOS virtualized inside of proxmox. The VyOS is technically HA as it can migrate between Server 3 and Server 1, however this would require manually changing over the cables to the ISP and as such it's mostly HA in case of last resort(however as noted later I do have an idear to fix this).
+
+This server doesn't have an upgrade path really, I only have it because I got it for free from a friend and it works so until it dies it will probally stay in this configuration as it's not really doing much, if I where to ever replace it I would either go with a Mini PC or something similar.
+
 
 ## Desktop
 
